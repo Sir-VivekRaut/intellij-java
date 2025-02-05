@@ -58,28 +58,54 @@ public class Misc {
 //                    System.out.println("No numbers containing the digit 2 found.");
 //                }
 //            }
-    public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
-        int marks = 0;
+//    public static void main(String[]args){
+//        Scanner sc = new Scanner(System.in);
+//        int marks = 0;
+//
+//        try{
+//            System.out.println("Enter the marks :");
+//            marks = sc.nextInt();
+//            if(marks >=75&&marks<=100){
+//                System.out.println("Grade A");
+//            }
+//            else if (marks>=40 && marks<=74) {
+//                System.out.println("Grade B");
+//            }
+//            else {throw new Exception("Invalid Grade ! Please Try Again");}
+//
+//        }
+//        catch (Exception e){
+//            System.out.println(e.getMessage());
+//        }
+//        finally {
+//
+//        }
+//    }
 
-        try{
-            System.out.println("Enter the marks :");
-            marks = sc.nextInt();
-            if(marks >=75&&marks<=100){
-                System.out.println("Grade A");
-            }
-            else if (marks>=40 && marks<=74) {
-                System.out.println("Grade B");
-            }
-            else {throw new Exception("Invalid Grade ! Please Try Again");}
+    int x=23;  //instance variable
+    Misc()
+    {
+        System.out.println("Constructor executed");
+        System.out.println(x);
+    }
+    Misc(int num) //PARAMETERIZED				//CONSTRUCTOR OVERLOADING
+    {
+        num=67;
+        System.out.println(num);
+    }
 
-        }
-        catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        finally {
-
-        }
+    public void display()
+    {
+        System.out.println("Display executed: "+x);
+    }
+    public static void main(String args[])
+    {
+        Misc dobj=new Misc();  //default constructor
+        dobj.x=44;
+        System.out.println(dobj.x);
+        dobj.display();  //x=44
+        Misc d=new Misc(56);
+        d.display();       //x=23
     }
 
 }
